@@ -13,7 +13,8 @@ app.use(helmet());
 app.use(cors());
 
 // rutas
-app.use(router);
+app.use("/api/v1", router);
+
 app.get("/", (req, res) => {
     return res.send("Welcome to express!")
 })
